@@ -1,0 +1,40 @@
+<html>
+<body>
+<h2>We are finding Palindrome words in the given Sentence</h2>
+<script type="text/javascript" charset="utf-8">
+let s=`Racecar is out of radar`;
+let sarr=[''];
+let l=0;
+let f=1;
+let ss='';
+for (var i=0;i<s.length;i++){
+  if(i>0){
+    if(s[i]!=' '&&s[i-1]==' '){
+    l++;
+    sarr[l]='';
+   }
+  }
+  if(s[i]!=' '){
+    sarr[l]=sarr[l]+s[i];
+  }
+  
+}
+console.log('Palindrome words are :')
+for (var i = 0; i <sarr.length; i++) {
+   ss=sarr[i].toLowerCase();
+  f=1;
+  // console.log(sarr[i]);
+  for(var j=0;j<Math.floor(ss.length/2);j++){
+    // console.log(sarr[i][j]+" "+sarr[i][sarr[i].length-1-j]);
+    // console.log(sarr[i][j]==sarr[i][sarr[i].length-1-j]);
+     if(ss[j]!=ss[ss.length-1-j]){
+       f=0;
+     }
+  }
+  if(f==1){
+    console.log(sarr[i])
+  }
+}
+</script>
+</body>
+</html>
